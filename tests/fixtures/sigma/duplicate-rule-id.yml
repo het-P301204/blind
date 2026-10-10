@@ -1,0 +1,19 @@
+title: Duplicate Rule ID Test
+id: a3d2bea5-4a3c-4e8b-82b1-c9f1e2d3a4b5
+status: stable
+description: This rule has the same ID as valid-rule.yml to test duplicate detection
+author: BLIND Test Suite
+date: 2024-01-15
+tags:
+    - attack.t1059.001
+    - attack.execution
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\powershell.exe'
+    condition: selection
+falsepositives:
+    - Legitimate admin activity
+level: medium

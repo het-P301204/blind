@@ -1,0 +1,16 @@
+title: Rule Without ATT&CK Tags
+id: no-tags-rule-001
+status: test
+description: A valid Sigma rule that has no attack.* tags — no ATT&CK mapping
+author: BLIND Test Suite
+date: 2024-01-15
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\suspicious.exe'
+    condition: selection
+falsepositives:
+    - Unknown
+level: medium

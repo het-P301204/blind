@@ -1,0 +1,34 @@
+{
+  "name": "BLIND — Detection Coverage Intelligence",
+  "short_name": "BLIND",
+  "description": "ATT&CK-aligned detection coverage intelligence platform for security teams",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#111110",
+  "background_color": "#111110",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["security", "productivity", "utilities"],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

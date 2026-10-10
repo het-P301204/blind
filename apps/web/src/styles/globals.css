@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-obsidian: #111110;
+  --color-graphite: #191917;
+  --color-warm-surface: #22211E;
+  --color-raised-panel: #292722;
+  --color-ivory: #F0EBDD;
+  --color-muted: #B8B1A2;
+  --color-copper: #C47D50;
+  --color-burnt-red: #A95445;
+  --color-sage: #84937A;
+  --color-amber: #D4A65A;
+  --color-border: #333330;
+  --color-border-subtle: #252523;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-obsidian);
+  color: var(--color-ivory);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.font-display { font-family: 'Space Grotesk', sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-graphite);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* Skeleton animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-graphite) 25%, var(--color-warm-surface) 50%, var(--color-graphite) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}
+
+/* CMDK dialog overlay */
+[cmdk-overlay] {
+  background: rgba(17, 17, 16, 0.8);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+
+[cmdk-dialog] {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 51;
+  width: 560px;
+  max-width: calc(100vw - 32px);
+}

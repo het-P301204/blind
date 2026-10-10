@@ -1,0 +1,27 @@
+title: Mimikatz LSASS Memory Access
+id: a3d2bea5-4a3c-4e8b-82b1-c9f1e2d3a4b5
+status: stable
+description: Detects Mimikatz accessing LSASS memory for credential dumping
+author: BLIND Test Suite
+date: 2024-01-15
+modified: 2024-06-01
+tags:
+    - attack.credential_access
+    - attack.t1003.001
+    - attack.t1003
+logsource:
+    category: process_access
+    product: windows
+detection:
+    selection:
+        TargetImage|endswith: '\lsass.exe'
+        GrantedAccess|contains:
+            - '0x1010'
+            - '0x1438'
+    condition: selection
+falsepositives:
+    - AV solutions
+    - EDR products
+level: critical
+references:
+    - https://attack.mitre.org/techniques/T1003/001/

@@ -1,0 +1,11 @@
+title: Broken YAML Rule
+id: broken-yaml-001
+status: stable
+description: This file has intentionally broken YAML syntax
+tags:
+    - attack.t1059
+  - bad_indent_here
+logsource:
+    category: process_creation
+    product: windows
+detection: [invalid
